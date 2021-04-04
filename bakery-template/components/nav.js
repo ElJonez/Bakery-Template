@@ -1,6 +1,6 @@
 export default function Nav() {
   return (
-  <div class="mx-auto bg-blue-300 p-5 text-xl">
+  <div class="mx-auto bg-blue-300 p-5 text-3xl font-light">
     <nav class="flex justify-between">
         <div>
             <a href="#">Logo</a>
