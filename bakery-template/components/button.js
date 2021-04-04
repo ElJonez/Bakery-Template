@@ -1,7 +1,7 @@
 function Button() {
   return (
-    <button className="py-3 px-5 bg-blue-400 text-gray-50 hover:bg-blue-200">
-      I am a button
+    <button className="py-3 px-5 bg-red-500 text-black hover:bg-red-400">
+      Button
     </button>
   );
 }
