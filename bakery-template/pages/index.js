@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Box from "../components/Box"; //import default
+import { Button, Button2 } from "../components/Button"; //import multiepl from 1 file
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
         <h1 className={styles.title}>
           <div>
             Welcome to The Bakery
+            <Box />
+            <Button />
           </div>
         </h1>
       </main>
