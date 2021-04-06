@@ -1,7 +1,11 @@
-function Button() {
+function Button({ colour, rounded, children, icon }) {
   return (
-    <button className="py-3 px-5 bg-red-500 text-black hover:bg-red-400">
-      Button
+    <button
+      className={`py-3 px-5 bg-${colour}-500 text-gray-50 hover:bg-${colour}-400 ${
+        rounded ? "rounded" : ""
+      }`}
+    >
+      {children}
     </button>
   );
 }
