@@ -1,5 +1,6 @@
 import "tailwindcss/tailwind.css";
 import Navbar from "../components/Navbar";
+// @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 
 // *This is the top level component "_app"
 // *For pages that have the same component like a navbar or footer you can include them here around the <Component/> which is a page in ./pages/
