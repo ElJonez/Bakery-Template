@@ -13,7 +13,7 @@ export default function Home() {
         <marquee>Marquee</marquee>
       </div>
       <div className="flex flex-col justify-center space-y-5 items-center p-5 h-screen bg-gradient-to-tr from-pink-500 via-pink-400 to-pink-600">
-        <h1 className="text-5xl font-bold">Welcome to The Backery</h1>
+        <h1 className="text-5xl font-bold">Welcome to The Bakery</h1>
         <Box />
         {/* components without children close off in a single tag */}
         <Button2>children go inside of component tags</Button2>
