@@ -1,5 +1,4 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
@@ -7,6 +6,7 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         "header-pattern": "url('/header.svg')",
+        "about-pattern": "url('/header.svg')",
         "header-texture": "url('/header.png')",
       }),
       fontFamily: {

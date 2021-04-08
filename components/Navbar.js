@@ -51,6 +51,25 @@ export default function Navbar() {
     }
   };
 
+ const links = ["Home", "About", "Gallery", "Shop", "Contact"];
+  const linksContent = links.map((link) => {
+    return (
+      <li className="mr-3">
+        <Link href={`/${link != "Home" ? link : ""}`}>
+          <a
+            className={`${
+              setActiveClasses(link)
+                ? "font-bold text-pink-500"
+                : " text-pink-600"
+            } inline-block px-4 py-2 hover:text-pink-400`}
+          >
+            {link}
+          </a>
+        </Link>
+      </li>
+    );
+  });
+
   return (
     <nav className={`fixed top-0 z-30 w-full text-gray-100 py-2`}>
       <div className="container flex flex-wrap items-center justify-between w-full md:mx-auto mt-0">
@@ -85,71 +104,7 @@ export default function Navbar() {
           id="nav-content"
         >
           <ul className="items-center justify-end flex-1 list-reset lg:flex">
-            <li className="mr-3">
-              <Link href="/">
-                <a
-                  className={`${
-                    setActiveClasses("Home")
-                      ? "font-bold text-pink-500"
-                      : " text-pink-600"
-                  } inline-block px-4 py-2 hover:text-pink-400`}
-                >
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li className="mr-3">
-              <Link href="/About">
-                <a
-                  className={`${
-                    setActiveClasses("About")
-                      ? "font-bold text-pink-500"
-                      : " text-pink-600"
-                  } inline-block px-4 py-2 hover:text-pink-400`}
-                >
-                  About
-                </a>
-              </Link>
-            </li>
-            <li className="mr-3">
-              <Link href="/Gallery">
-                <a
-                  className={`${
-                    setActiveClasses("Gallery")
-                      ? "font-bold text-pink-500"
-                      : " text-pink-600"
-                  } inline-block px-4 py-2 hover:text-pink-400`}
-                >
-                  Gallery
-                </a>
-              </Link>
-            </li>
-            <li className="mr-3">
-              <Link href="/Shop">
-                <a
-                  className={`${
-                    setActiveClasses("Shop")
-                      ? "font-bold text-pink-500"
-                      : " text-pink-600"
-                  } inline-block px-4 py-2 hover:text-pink-400`}
-                >
-                  Shop
-                </a>
-              </Link>
-            </li>
-            <li className="mr-3">
-              <Link href="/Contact">
-                <a
-                  className={`${
-                    setActiveClasses("Contact")
-                      ? "font-bold text-pink-500"
-                      : " text-pink-600"
-                  } inline-block px-4 py-2 hover:text-pink-400`}
-                >
-                  Contact
-                </a>
-              </Link>
-            </li>
+          {linksContent}
           </ul>
         </div>
       </div>
